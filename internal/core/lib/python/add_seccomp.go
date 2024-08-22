@@ -29,7 +29,8 @@ func InitSeccomp(uid int, gid int, enable_network bool) error {
 	allowed_not_kill_syscalls = append(allowed_not_kill_syscalls, python_syscall.ALLOW_ERROR_SYSCALLS...)
 
 	allowed_syscall := os.Getenv("ALLOWED_SYSCALLS")
-	println(allowed_syscall)
+	// println(allowed_syscall)
+	// fmt.Println("asdfasdfsadfadsf")
 	if allowed_syscall != "" {
 		nums := strings.Split(allowed_syscall, ",")
 		for num := range nums {
